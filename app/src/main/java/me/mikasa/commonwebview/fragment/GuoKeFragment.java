@@ -58,7 +58,7 @@ public class GuoKeFragment extends BaseFragment implements GetGuoKeContract.View
             @Override
             public void onItemClick(int pos) {
                 Intent intent=new Intent(mContext, WebViewActivity.class);
-                intent.putExtra("link",mGuokeList.get(pos).getLink());//有header
+                intent.putExtra("link",mGuokeList.get(pos).getLink());
                 startActivity(intent);
             }
 
