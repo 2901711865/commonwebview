@@ -27,7 +27,6 @@ public class PhotoViewActivity extends BaseToolbarActivity implements DownloadLi
     ImageView iv_download;
 
     private String imgUrl;
-    private Snackbar snackbar;
     private Context mContext;
     private boolean isDownload=false;
 
@@ -79,7 +78,7 @@ public class PhotoViewActivity extends BaseToolbarActivity implements DownloadLi
     @Override
     public void downloadSuccess() {
         isDownload=true;
-        snackbar= Snackbar.make(photoView,"图片已保存到"+FILEPATH,Snackbar.LENGTH_LONG);
+        Snackbar snackbar= Snackbar.make(photoView,"图片已保存到"+FILEPATH,Snackbar.LENGTH_LONG);
         snackbar.getView().setBackgroundResource(R.color.snackbar_success);
         snackbar.show();
     }
